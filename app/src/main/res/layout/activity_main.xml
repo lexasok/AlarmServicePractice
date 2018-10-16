@@ -16,7 +16,8 @@
         android:text="@string/title_button_set_10_sec_alarm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="set10secButtonClicked"/>
 
     <Button
         android:id="@+id/buttonSet1minAlarm"
@@ -28,7 +29,8 @@
         android:text="@string/title_button_set_1_min_alarm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSet10secAlarm" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSet10secAlarm"
+        android:onClick="set1minButtonClicked"/>
 
     <Button
         android:id="@+id/buttonSet5minAlarm"
@@ -40,5 +42,6 @@
         android:text="@string/title_button_set_5_min_alarm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSet1minAlarm" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSet1minAlarm"
+        android:onClick="set5minButtonClicked"/>
 </android.support.constraint.ConstraintLayout>
