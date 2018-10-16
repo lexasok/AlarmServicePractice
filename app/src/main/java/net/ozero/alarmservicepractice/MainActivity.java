@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setAlarm(long timeMillis) {
 
-        Intent intent = new Intent(getApplicationContext(), AlarmIntentService.class);
+        Intent intent = new Intent(this, AlarmIntentService.class);
         intent.putExtra(EXTRA_KEY_TIME, timeMillis);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startService(intent);

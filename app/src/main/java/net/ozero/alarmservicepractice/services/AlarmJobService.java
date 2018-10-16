@@ -32,6 +32,8 @@ public class AlarmJobService extends JobService {
 
         Notification notification = builder.build();
 
+        notification.flags = notification.flags | Notification.FLAG_NO_CLEAR | Notification.FLAG_ONGOING_EVENT;
+
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         if (notificationManager != null) {
