@@ -3,6 +3,7 @@ package net.ozero.alarmservicepractice;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import net.ozero.alarmservicepractice.services.AlarmIntentService;
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Log.i(getClass().getName(), "onCreate");
     }
 
     public void set10secButtonClicked(View view) {
@@ -34,8 +37,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void setAlarm(long timeMillis) {
 
-        Intent intent = new Intent(this, AlarmIntentService.class);
+        Intent intent = new Intent(getApplicationContext(), AlarmIntentService.class);
         intent.putExtra(EXTRA_KEY_TIME, timeMillis);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startService(intent);
+
+        Log.i(getClass().getName(), "alarm set");
     }
 }
