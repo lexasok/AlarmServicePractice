@@ -17,6 +17,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service
+            android:name=".services.AlarmIntentService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":alarmServiceProcessAlarmServicePracticeApp" />
     </application>
 
 </manifest>
