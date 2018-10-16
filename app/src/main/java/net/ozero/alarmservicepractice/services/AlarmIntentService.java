@@ -15,8 +15,6 @@ public class AlarmIntentService extends IntentService {
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
 
-
-
     }
 
     @Override
